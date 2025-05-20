@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureCheck | Password Analyzer</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+<body class="split-screen">
+
+  <!-- Left Side -->
+  <div class="left-pane">
+    <div class="left-content">
+      <h1 class="title">SecureCheck</h1>
+      <p class="subtitle">Test your password strength securely</p>
+      <br>
+      <form id="password-form">
+        <h2 class="form-label">Enter your password:</h2>
+        <div class="input-wrapper">
+          <input type="password" id="password" placeholder="Enter password" class="custom-input" />
+          <button type="button" id="toggle-password" aria-label="Toggle password visibility">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+        <button type="submit" class="analyze-button">Analyze</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Right Side -->
+  <div class="right-pane">
+    <div id="loading" class="hidden loading-box">
+      <div class="spinner"></div>
+      <p>Analyzing password, please wait...</p>
+    </div>
+
+    <div id="results" class="analysis-section hidden">
+      <h2 class="text-xl font-bold text-primary-400 mb-4 text-center">Analysis Results</h2>
+      <div class="result-row"><span class="label">Strength:</span><span class="value" id="strength">-</span></div>
+      <div class="strength-bar"><div id="strength-bar-fill"></div></div>
+      <div class="result-row"><span class="label">Entropy:</span><span class="value" id="entropy">-</span></div>
+      <div class="result-row"><span class="label">Crack Time:</span><span class="value" id="crack-time">-</span></div>
+      <div class="result-row"><span class="label">Suggestions:</span><span class="value" id="suggestions">-</span></div>
+      <div class="result-row"><span class="label">Cracked by John:</span><span class="value" id="cracked-result">-</span></div>
+      <div class="result-row"><span class="label">Cracked Password:</span><span class="value" id="cracked-password">-</span></div>
+    </div>
+  </div>
+
+  <script src="../static/script.js"></script>
+</body>
+</html>

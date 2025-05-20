@@ -48,18 +48,26 @@ Follow these steps to run the project locally:
   - Password strength
 - Results are displayed in a visually styled output panel.
 
-## 🔐 Notes
+## 📁 Wordlist Disclaimer
 
-- Passwords are never stored or logged — analysis is done in-memory.
-- You can replace `rockyou.txt` with any custom wordlist inside `/wordlists`.
-- Brute-force simulation is purely mathematical for performance and clarity.
+This project uses `rockyou.txt` for performing dictionary attacks via John the Ripper.
+
+However, due to GitHub's file size limit of 100MB, the `rockyou.txt` file is **not included** in this repository.
+
+### 🔽 How to Set It Up
+
+1. Download `rockyou.txt` from the official [SecLists GitHub repository](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz)
+2. Extract the archive to obtain `rockyou.txt`
+3. Place the file inside the `/wordlists` folder in this project
+
+Once added, the dictionary attack functionality using John the Ripper will work as expected.
 
 ## 📦 Future Enhancements
 
-- 🧠 AI-generated password suggestions based on analysis
-- 🌐 WebSocket-based cracking feedback
-- 🔐 Support for additional hash formats like SHA-1, bcrypt
+- 🧠 AI-generated password suggestions based on analysis  
+- 🌐 WebSocket-based cracking feedback  
+- 🔐 Support for additional hash formats like SHA-1, bcrypt  
 
 ## Contact
 
-If you have any questions or suggestions regarding this project, feel free to contact me at [atharvat.code@gmail.com](mailto:atharvat.code@gmail.com).
+If you have any questions or suggestions regarding this project, feel free to contact us at [atharvat.code@gmail.com](mailto:atharvat.code@gmail.com).
